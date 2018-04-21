@@ -1,32 +1,56 @@
-<!DOCTYPE html>
-<html>
-<head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" type="text/css" href="style.css">
-</head>
-<body>
+<?php
 
-<h2>Admin Login Form</h2>
+    require_once('./loginHeader.php');
+    require_once('../header.php');
+    // require('includes/loginI.php');
 
-<form action="./includes/admin_loginI.php">
-  <div class="imgcontainer">
-    <img src="../images/logo.png" alt="Logo" class="dp">
+    $status = $_GET['login'];
+
+    // Wrong password
+    if($status == "wp") {
+      echo '
+      <div class="alert alert-danger">
+        <strong>Error!</strong> Email id or password doesn\'t match
+      </div>
+      ';
+    }
+    // Not registered
+    elseif($status == "nr"){
+      echo '
+      <div class="alert alert-danger">
+        <strong>Error!</strong> Email id not registered
+      </div>
+      ';
+    }
+    // Invalid Email
+    elseif($status == "ie"){
+      echo '
+      <div class="alert alert-danger">
+        <strong>Error!</strong> Enter a valid email
+      </div>
+      ';
+    }
+
+    echo "Hurray!";
+?>
+
+<form action = "./includes/admin_loginI.php">
+  <div class = "imgcontainer">
+    <img src = "../images/logo.png" class = "dp">
   </div>
 
-  <div class="container">
-    <label for="uname"><b>Username</b></label>
-    <input type="text" placeholder="Enter Username" name="name" required>
+  <div class = "container">
+    <label for = "uname"><b>Username</b></label>
+    <input type = "text" placeholder = "Enter Username" name = "name" required>
 
-    <label for="psw"><b>Password</b></label>
-    <input type="password" placeholder="Enter Password" name="password" required>
+    <label for = "psw"><b>Password</b></label>
+    <input type = "password" placeholder = "Enter Password" name = "password" required>
 
-    <label for="adminKey"><b>AdminKey</b></label>
-    <input type="password" placeholder="Enter key" name="adminKey" required>
+    <label for = "adminKey"><b>AdminKey</b></label>
+    <input type = "password" placeholder = "Enter key" name = "adminKey" required>
         
-    <button type="submit" name = "submit">Login</button>
+    <button type = "submit" name = "submit">Login</button>
   </div>
 
 </form>
 
-</body>
-</html>
