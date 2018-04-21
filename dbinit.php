@@ -78,40 +78,40 @@ if($conn) {
       else {
         echo "Can't create Table 'client'";
       }
-      // Create table admin and add root entry
+
       $table = "CREATE TABLE admin (
         id INTEGER PRIMARY KEY AUTO_INCREMENT,
         username VARCHAR(30) UNIQUE NOT NULL,
         password VARCHAR(20) NOT NULL,
-        key INT(11) NOT NULL;
-      );";
+        adminKey INT(11) NOT NULL
+      )";
 
       $tableCreated = mysqli_query($conn, $table);
-        if(tableCreated) {
-          echo "Table 'admin' created successfully<br>";
-        } else {
-          echo "Can't create admin table";
-        }
+      if(tableCreated) {
+        echo "Table 'admin' created successfully<br>";
+      } else {
+        echo "Can't create admin table";
+      }
 
-        $sql = "INSERT INTO admin (id, username, password, key) VALUES('2', 'first@admin', '23571113170')";
+      $sql = "INSERT INTO admin (id, username, password, adminKey) VALUES('2', 'first@admin', 'password', '2134321222')";
 
-        if(mysqli_query($conn, $sql)) {
-          $last_id = mysqli_insert_id($conn);
-          echo "New admin created successfully. Admin id : " . $last_id;
-        } else {
-          echo "Error in creating new admin";
-        }
+      if(mysqli_query($conn, $sql)) {
+        $last_id = mysqli_insert_id($conn);
+        echo "New admin created successfully. Admin id : " . $last_id;
+      } else {
+        echo "Error in creating new admin ".mysqli_error($conn);
+      }
     }
     else {
       echo "Can't use database $dbname";
     }
   }
   else {
-    echo "Couldn't create database";
+    echo "Couldn't create database".mysqli_error($conn);
   }
 }
 else {
-  echo "Failed to connect!";
+  echo "Failed to connect!".mysqli_connect_error();
 }
 $conn.close();
 ?>
