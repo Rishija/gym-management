@@ -1,6 +1,6 @@
 <?php
 
-    require_once('../header.php');
+    require_once('../includes/header.php');
     require_once('./loginHeader.php');
     // require('includes/loginI.php');
 

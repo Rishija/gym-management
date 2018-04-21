@@ -1,5 +1,5 @@
 <?php
-    require_once('header.php');
+    require_once('includes/header.php');
 ?>
 
 <div class = "container" style = "width: 100%; height: 50%;">
