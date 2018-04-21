@@ -13,15 +13,15 @@
         <nav class = "navbar navbar-inverse">
             <div class = "container-fluid">
                 <div class = "navbar-header">
-                    <a class = "navbar-brand" href = "index.php">Fitness Freak</a>
+                    <a class = "navbar-brand" id = "Company" href = "/gym_management/index.php">Fitness Freak</a>
                 </div>
                 <ul class = "nav navbar-nav">
-                    <li class = "active"><a href = "#">About</a></li>
-                    <li><a href = "#">Facilities</a></li>
-                    <li><a href = "#">Our trainers</a></li>
-                    <li><a href = "#">Achievements</a></li>
-                    <li><a href = "#">Gallery</a></li>
-                    <li><a href = "#">Contact</a></li>
+                    <li id = "About"><a href = "#">About</a></li>
+                    <li id = "Facilities"><a href = "#">Facilities</a></li>
+                    <li id = "Trainers"><a href = "#">Our trainers</a></li>
+                    <li id = "Achievements"><a href = "#">Achievements</a></li>
+                    <li id = "Gallery"><a href = "#">Gallery</a></li>
+                    <li id = "Contact"><a href = "#">Contact</a></li>
                 </ul>
                 <ul class = "nav navbar-nav navbar-right">
                     <?php
