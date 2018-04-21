@@ -8,7 +8,7 @@ $conn = mysqli_connect($serverName, $userName, $password);
 if($conn) {
 
   $dbname = "gym";
-  $createDb = "CREATE DATABASE $dbname";
+  $createDb = "CREATE DATABASE IF NOT EXISTS $dbname";
   $db = mysqli_query($conn, $createDb);
 
   if($db) {
@@ -32,7 +32,7 @@ if($conn) {
         echo "Table 'members' created successfully<br>";
       }
       else {
-        echo "Can't create Table 'members'";
+        echo "Can't create Table 'members'<br>";
       }
 
       $table = "CREATE TABLE trainer (
@@ -53,7 +53,7 @@ if($conn) {
         echo "Table 'trainer' created successfully<br>";
       }
       else {
-        echo "Can't create Table 'trainer'";
+        echo "Can't create Table 'trainer'<br>";
       }
 
       $table = "CREATE TABLE client (
@@ -76,7 +76,7 @@ if($conn) {
         echo "Table 'client' created successfully<br>";
       }
       else {
-        echo "Can't create Table 'client'";
+        echo "Can't create Table 'client'<br>";
       }
 
       $table = "CREATE TABLE admin (
@@ -90,7 +90,7 @@ if($conn) {
       if(tableCreated) {
         echo "Table 'admin' created successfully<br>";
       } else {
-        echo "Can't create admin table";
+        echo "Can't create admin table<br>";
       }
 
       $sql = "INSERT INTO admin (id, username, password, adminKey) VALUES('2', 'first@admin', 'password', '2134321222')";
@@ -103,7 +103,7 @@ if($conn) {
       }
     }
     else {
-      echo "Can't use database $dbname";
+      echo "Can't use database $dbname<br>";
     }
   }
   else {
