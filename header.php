@@ -38,7 +38,7 @@
                           <ul class = "dropdown-menu" style = "text-align: center;">
                             <li><a href = "login/login.php">Customer</a></li>
                             <li><a href = "#">Trainer</a></li>
-                            <li><a href = "#">Admin</a></li>
+                            <li><a href = "login/login_admin.php">Admin</a></li>
                           </ul>
                         </li>
                     <?php
