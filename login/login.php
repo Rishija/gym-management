@@ -3,7 +3,6 @@
     require_once('../header.php');
     require_once('./loginHeader.php');
     // require('includes/loginI.php');
-    echo '<div class = loginform>';
 
     $status = $_GET['login'];
 
@@ -11,8 +10,8 @@
     if($status == "wp") {
 ?>
 
-      <!-- <div class="alert alert-danger"> -->
-        <strong>Error!</strong> Email id or password doesn\'t match
+      <div class="alert alert-danger">
+        <strong>Error!</strong> Username or password doesn't match
       </div>
 <?php
     }
@@ -21,14 +20,6 @@
 ?>
       <div class="alert alert-danger">
         <strong>Error!</strong> Email id not registered
-      </div>
-<?php
-    }
-    // Invalid Email
-    elseif($status == "ie") {
-?>
-      <div class="alert alert-danger">
-        <strong>Error!</strong> Enter a valid email
       </div>
 <?php
     }
@@ -41,10 +32,20 @@
 
   <div class = "container">
     <label for = "uname"><b>Username</b></label>
-    <input type = "text" placeholder="Enter Username" name="name" required>
+
+    <?php
+      $name = $_GET['name'];
+      if(isset($name)) {
+        echo '<input type = "text" name = "name"
+        placeholder = "Enter Username or email" value = "'.$name.'">';
+      }
+      else {
+        echo '<input type = "text" placeholder = "Enter Username or email" name = "name" required>';
+      }
+    ?>
 
     <label for = "psw"><b>Password</b></label>
-    <input type = "password" placeholder="Enter Password" name="password" required>
+    <input type = "password" placeholder = "Enter Password" name = "password" required>
 
     <button type = "submit" name = "submit">Login</button>
   </div>
