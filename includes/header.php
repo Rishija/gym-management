@@ -16,11 +16,11 @@
                     <a class = "navbar-brand" id = "Company" href = "/gym_management/index.php">Fitness Freak</a>
                 </div>
                 <ul class = "nav navbar-nav">
-                    <li id = "About"><a href = "#">About</a></li>
-                    <li id = "Facilities"><a href = "#">Facilities</a></li>
+                    <li id = "About"><a href = "/gym_management/about.php">About</a></li>
+                    <li id = "Facilities"><a href = "/gym_management/facilities.php">Facilities</a></li>
                     <li id = "Trainers"><a href = "#">Our trainers</a></li>
-                    <li id = "Achievements"><a href = "#">Achievements</a></li>
-                    <li id = "Gallery"><a href = "#">Gallery</a></li>
+                    <li id = "Achievements"><a href = "/gym_management/achievements.php">Achievements</a></li>
+                    <li id = "Gallery"><a href = "/gym_management/gallery.php">Gallery</a></li>
                     <li id = "Contact"><a href = "#">Contact</a></li>
                 </ul>
                 <ul class = "nav navbar-nav navbar-right">

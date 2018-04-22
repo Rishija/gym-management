@@ -1,0 +1,39 @@
+.content {
+	margin : 2em;
+	padding: 0em 2em;
+	font-size: 1.5em;
+}
+img {
+	width: 500px;
+	height: 300px;
+	margin-right: 1em;
+	float: left;
+	box-shadow: 0 1em 1em 0 gray;
+}
+.img1 {
+	margin-left: 1em;
+	float: right;
+}
+
+.display img {
+    display: inline-block;
+    width: 25%;
+    height: 30%;
+    margin: 2em;
+    float: initial;
+}
+
+.img-container {
+	display: block;
+	margin : 2em;
+	padding: 2em;
+	align-content: center;
+}
+.display {
+    text-align: center;
+}
+
+.display img:hover {
+	width: 30%;
+	height: 40%;
+}
