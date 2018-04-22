@@ -12,8 +12,7 @@
   require('../../includes/db.php');
 
   // Search in clients
-  $getEmails1 = "SELECT username, password from client as c, members as m
-  WHERE c.username = m.username and (email = ? OR c.username = ?)";
+  $getEmails1 = "SELECT c.username, password from client as c, members as m WHERE c.username=m.username and (m.email=? OR c.username=?)";
 
   $stmt1 = mysqli_stmt_init($conn);
   mysqli_stmt_prepare($stmt1, $getEmails1);
@@ -29,7 +28,7 @@
   // If not found in table 'client', search in table 'trainer'
   if($num1 == 0) {
 
-    $getEmails2 = "SELECT username, password from client WHERE email = ? or username = ?";
+    $getEmails2 = "SELECT t.username, password from trainer as t, members as m WHERE t.username=m.username and (m.email=? OR t.username=?)";
 
     $stmt2 = mysqli_stmt_init($conn);
     mysqli_stmt_prepare($stmt2, $getEmails2);
@@ -63,12 +62,13 @@
 
         session_start();
 
-        $uid = $row[0];
+        $uid = $row2[0];
         $type = "trainer";
         $_SESSION['uid'] = $uid;
         $_SESSION['type'] = $type;
 
-        header("Location: /gym_management/index.php");
+        header("Location: /gym_management/index.php?login=sucess_trainer");
+        exit();
       }
     }
   }
@@ -87,12 +87,13 @@
 
       session_start();
 
-      $uid = $row[0];
+      $uid = $row1[0];
       $type = "client";
       $_SESSION['uid'] = $uid;
       $_SESSION['type'] = $type;
 
-      header("Location: /gym_management/index.php");
+      header("Location: /gym_management/index.php?login=success_client");
+      exit();
     }
   }
 ?>

@@ -23,7 +23,7 @@ if($conn) {
         fname VARCHAR(30) NOT NULL,
         lname VARCHAR(30) NOT NULL,
         email VARCHAR(40) NOT NULL,
-        phone VARCHAR(10) NOT NULL,
+        phone VARCHAR(20) NOT NULL,
         joined DATETIME
       );";
 
@@ -64,9 +64,9 @@ if($conn) {
         height FLOAT NOT NULL,
         fee INT(5),
         purpose VARCHAR(20),
-        medicalHistory VARCHAR(100),
-        trainer VARCHAR(30) UNIQUE,
-        chart BLOB,
+        history VARCHAR(100),
+        trainer VARCHAR(30) DEFAULT NULL,
+        chart BLOB DEFAULT NULL,
         FOREIGN KEY (username) REFERENCES members(username),
         FOREIGN KEY (trainer) REFERENCES trainer(username)
       );";

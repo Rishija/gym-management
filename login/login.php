@@ -1,7 +1,8 @@
 <?php
 
-    require_once('../includes/header.php');
-    require_once('./loginHeader.php');
+
+    require('./loginHeader.php');
+    require('../includes/header.php');
 
     $status = $_GET['login'];
 
