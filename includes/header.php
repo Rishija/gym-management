@@ -46,7 +46,7 @@
                       else {
                     ?>
                         <li><a href = "#"><span class = "glyphicon glyphicon-user">Account</span></a></li>
-                        <li><a href = "logout.php"><span class = "glyphicon glyphicon-log-out"></span>Logout</a></li>
+                        <li><a href = "/gym_management/logout/logout.php"><span class = "glyphicon glyphicon-log-out"></span>Logout</a></li>
                     <?php
                       }
                     ?>
