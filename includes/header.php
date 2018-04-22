@@ -30,15 +30,15 @@
                     ?>
                         <li class = "dropdown"><a class = "dropdown-toggle" data-toggle = "dropdown"><span class = "glyphicon glyphicon-user"></span> Sign Up<span class = "caret"></span></a>
                           <ul class = "dropdown-menu" style = "text-align: center;">
-                            <li><a href = "#">Join us</a></li>
+                            <li><a href = "/gym_management/signup/signup_client.php">Join us</a></li>
                             <li><a href = "#">Join as trainer</a></li>
                           </ul>
                         </li>
                         <li class = "dropdown"><a class = "dropdown-toggle" data-toggle = "dropdown"><span class = "glyphicon glyphicon-log-in"></span> Login<span class="caret"></span></a>
                           <ul class = "dropdown-menu" style = "text-align: center;">
-                            <li><a href = "login/login.php">Customer</a></li>
-                            <li><a href = "#">Trainer</a></li>
-                            <li><a href = "login/login_admin.php">Admin</a></li>
+                            <li><a href = "/gym_management/login/login.php">Customer</a></li>
+                            <li><a href = "/gym_management/login/login.php">Trainer</a></li>
+                            <li><a href = "/gym_management/login/login_admin.php">Admin</a></li>
                           </ul>
                         </li>
                     <?php
@@ -46,7 +46,7 @@
                       else {
                     ?>
                         <li><a href = "#"><span class = "glyphicon glyphicon-user">Account</span></a></li>
-                        <li><a href = "login.php"><span class = "glyphicon glyphicon-log-out"></span>Logout</a></li>
+                        <li><a href = "logout.php"><span class = "glyphicon glyphicon-log-out"></span>Logout</a></li>
                     <?php
                       }
                     ?>

@@ -2,7 +2,6 @@
 
     require_once('../includes/header.php');
     require_once('./loginHeader.php');
-    // require('includes/loginI.php');
 
     $status = $_GET['login'];
 
@@ -26,8 +25,8 @@
 ?>
 
 <form action = "./includes/loginI.php" method = "POST">
-  <div class = "imgcontainer">
-    <img src = "../images/logo.jpg" class = "dp">
+  <div align="center">
+    <img src = "../images/logo.png">
   </div>
 
   <div class = "container">
