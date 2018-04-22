@@ -17,8 +17,8 @@ img {
 
 .display img {
     display: inline-block;
-    width: 25%;
-    height: 30%;
+    width: 20%;
+    height: 15%;
     margin: 2em;
     float: initial;
 }
@@ -34,6 +34,26 @@ img {
 }
 
 .display img:hover {
+	width: 40%;
+	height: 30%;
+}
+.box-container {
 	width: 30%;
-	height: 40%;
+	margin: 0 auto;
+	text-align: center;
+}
+.box {
+	background-color: #404040;
+	color: white;
+	padding-top: 1em;
+	padding-bottom: 1em;
+	margin-top: 1em;
+	box-shadow: 0 0.5em 0.5em 0 #a6a6a6;
+}
+.heading {
+	font-weight: bold;
+}
+.box-container h1 {
+	font-weight: bold;
+	color: black;
 }

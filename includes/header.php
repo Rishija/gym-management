@@ -21,7 +21,7 @@
                     <li id = "Trainers"><a href = "#">Our trainers</a></li>
                     <li id = "Achievements"><a href = "/gym_management/achievements.php">Achievements</a></li>
                     <li id = "Gallery"><a href = "/gym_management/gallery.php">Gallery</a></li>
-                    <li id = "Contact"><a href = "#">Contact</a></li>
+                    <li id = "Contact"><a href = "/gym_management/contact.php">Contact</a></li>
                 </ul>
                 <ul class = "nav navbar-nav navbar-right">
                     <?php
