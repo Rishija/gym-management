@@ -1,9 +1,9 @@
 <?php
 
   $serverName = "localhost";
-  $userName = "root";
-  $password = "root";
-  $dataBase = "gym";
+  $username_db = "root";
+  $password_db = "root";
+  $dataBase_db = "gym";
 
-  $conn = mysqli_connect($serverName, $userName, $password, $dataBase);
+  $conn = mysqli_connect($serverName, $username_db, $password_db, $dataBase_db);
 ?>

@@ -67,7 +67,7 @@
         $_SESSION['uid'] = $uid;
         $_SESSION['type'] = $type;
 
-        header("Location: /gym_management/index.php?login=sucess_trainer");
+        header("Location: /gym_management/index.php?login=success_trainer");
         exit();
       }
     }
@@ -97,3 +97,4 @@
     }
   }
 ?>
+
