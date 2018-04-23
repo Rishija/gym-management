@@ -1,4 +1,4 @@
-<html>
+3<html>
     <head>
         <title>Fitness Freak</title>
         <meta charset = "utf-8">
@@ -31,7 +31,7 @@
                         <li class = "dropdown"><a class = "dropdown-toggle" data-toggle = "dropdown"><span class = "glyphicon glyphicon-user"></span> Sign Up<span class = "caret"></span></a>
                           <ul class = "dropdown-menu" style = "text-align: center;">
                             <li><a href = "/gym_management/signup/signup_client.php">Join us</a></li>
-                            <li><a href = "#">Join as trainer</a></li>
+                            <li><a href = "/gym_management/signup/signup_trainer.php">Join as trainer</a></li>
                           </ul>
                         </li>
                         <li class = "dropdown"><a class = "dropdown-toggle" data-toggle = "dropdown"><span class = "glyphicon glyphicon-log-in"></span> Login<span class="caret"></span></a>
