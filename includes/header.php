@@ -18,7 +18,7 @@
                 <ul class = "nav navbar-nav">
                     <li id = "About"><a href = "/gym_management/about.php">About</a></li>
                     <li id = "Facilities"><a href = "/gym_management/facilities.php">Facilities</a></li>
-                    <li id = "Trainers"><a href = "#">Our trainers</a></li>
+                    <li id = "Trainers"><a href = "/gym_management/trainers.php">Our trainers</a></li>
                     <li id = "Achievements"><a href = "/gym_management/achievements.php">Achievements</a></li>
                     <li id = "Gallery"><a href = "/gym_management/gallery.php">Gallery</a></li>
                     <li id = "Contact"><a href = "/gym_management/contact.php">Contact</a></li>
