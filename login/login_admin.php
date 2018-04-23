@@ -19,7 +19,16 @@
 
   <div class = "container">
     <label for = "uname"><b>Username</b></label>
-    <input type = "text" placeholder = "Enter Username" name = "name" required>
+      <?php
+        $name = $_GET['name'];
+        if(isset($name)) {
+          echo '<input type = "text" name = "name"
+          placeholder = "Enter Username or email" value = "'.$name.'">';
+        }
+        else {
+          echo '<input type = "text" placeholder = "Enter Username or email" name = "name" required>';
+        }
+      ?>
 
     <label for = "psw"><b>password</b></label>
     <input type = "password" placeholder = "Enter key" name = "password" required>

@@ -8,8 +8,6 @@
   $name_user = $_POST['name'];
   $password_user = $_POST['password'];
   $adminKey_user = $_POST['adminKey'];
-  var_dump($password_user);
-  var_dump($adminKey_user);
 
   require('../../includes/db.php');
 
@@ -33,7 +31,7 @@
     $pwdOk = password_verify($password_user, $encryptPwd);
     $keyOk = password_verify($adminKey_user, $encryptKey);
     if($pwdOk != true or $keyOk != true) {
-      header("Location: ../login_admin.php?login=wd&name=$name");
+      header("Location: ../login_admin.php?login=wd&name=$name_user");
       exit();
     }
     session_start();
@@ -45,7 +43,7 @@
     header("Location: /gym_management/index.php?login=success_admin");
   }
   else {
-    header("Location: ../login_admin.php?login=wd&name=$name");
+    header("Location: ../login_admin.php?login=wd&name=$name_user");
     exit();
   }
 ?>
