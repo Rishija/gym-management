@@ -28,7 +28,7 @@
     exit();
   }
 
-  require('../../includes/db.php');
+  // require('../../includes/db.php');
 
   // if registered email
   $getEmails = "SELECT email from members WHERE email=?";

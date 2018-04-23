@@ -33,6 +33,14 @@
   <div class="alert alert-success">
     <strong>Success!</strong> Signed up successfully
   </div>
+
+<?php
+    }
+    elseif($signupStatus == "error") {
+?>
+      <div class="alert alert-danger">
+        <strong>Error!</strong> Can't signup
+      </div>
 <?php
   }
 ?>
