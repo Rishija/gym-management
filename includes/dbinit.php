@@ -39,12 +39,12 @@ if($conn) {
         id INTEGER PRIMARY KEY AUTO_INCREMENT,
         username VARCHAR(30) UNIQUE NOT NULL,
         password VARCHAR(256) NOT NULL,
-        specialization VARCHAR(20) NOT NULL,
-        qualification VARCHAR(20) NOT NULL,
+        specialization VARCHAR(50) NOT NULL,
+        qualification VARCHAR(50) NOT NULL,
         experience INT(2) NOT NULL,
         salary INT(5),
-        type VARCHAR(10),
-        clientAssigned int(2),
+        type VARCHAR(50),
+        clientAssigned INT(2) DEFAULT 0,
         FOREIGN KEY (username) REFERENCES members(username)
       );";
 
