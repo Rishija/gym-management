@@ -3,7 +3,7 @@
         <title>Fitness Freak</title>
         <meta charset = "utf-8">
         <meta name = "viewport" content = "width = device-width, initial-scale = 1">
-        <link rel = "stylesheet" href = "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel = "stylesheet" href = "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"></link>
         <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src = "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
@@ -27,13 +27,15 @@
                     <?php
                       session_start();
                       if(!isset($_SESSION['uid'])) {
-                    ?>
-                        <li class = "dropdown"><a class = "dropdown-toggle" data-toggle = "dropdown"><span class = "glyphicon glyphicon-user"></span> Sign Up<span class = "caret"></span></a>
+
+                        echo '<li class = "dropdown"><a class = "dropdown-toggle" data-toggle = "dropdown"><span class = "glyphicon glyphicon-user"></span> Sign Up<span class = "caret"></span></a>
                           <ul class = "dropdown-menu" style = "text-align: center;">
                             <li><a href = "/gym_management/signup/signup_client.php">Join us</a></li>
                             <li><a href = "#">Join as trainer</a></li>
                           </ul>
                         </li>
+                        ';
+                        echo '
                         <li class = "dropdown"><a class = "dropdown-toggle" data-toggle = "dropdown"><span class = "glyphicon glyphicon-log-in"></span> Login<span class="caret"></span></a>
                           <ul class = "dropdown-menu" style = "text-align: center;">
                             <li><a href = "/gym_management/login/login.php">Customer</a></li>
@@ -41,13 +43,27 @@
                             <li><a href = "/gym_management/login/login_admin.php">Admin</a></li>
                           </ul>
                         </li>
-                    <?php
+                        ';
+                      }
+                      else if($_SESSION['type'] == "client") {
+                        echo '
+                          <li class = "dropdown"><a class = "dropdown-toggle" data-toggle = "dropdown"><span class = "glyphicon glyphicon-user"></span> Account<span class="caret"></span></a>
+                          <ul class = "dropdown-menu" style = "text-align: center;">
+                            <li><a href = "/gym_management/client/edit_details.php">Edit details</a></li>
+                          </ul>
+                        </li>
+                        ';
+                        echo '
+                        <li><a href = "/gym_management/logout/logout.php"><span class = "glyphicon glyphicon-log-out"></span>Logout</a></li>
+                        ';
                       }
                       else {
-                    ?>
+                        echo '
                         <li><a href = "#"><span class = "glyphicon glyphicon-user">Account</span></a></li>
+                        ';
+                        echo '
                         <li><a href = "/gym_management/logout/logout.php"><span class = "glyphicon glyphicon-log-out"></span>Logout</a></li>
-                    <?php
+                        ';
                       }
                     ?>
                 </ul>
