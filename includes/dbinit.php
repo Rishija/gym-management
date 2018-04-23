@@ -82,19 +82,21 @@ if($conn) {
       $table = "CREATE TABLE admin (
         id INTEGER PRIMARY KEY AUTO_INCREMENT,
         username VARCHAR(30) UNIQUE NOT NULL,
-        password VARCHAR(20) NOT NULL,
-        adminKey INT(11) NOT NULL
+        password VARCHAR(256) NOT NULL,
+        adminKey VARCHAR(256) NOT NULL
       )";
 
       $tableCreated = mysqli_query($conn, $table);
-      if(tableCreated) {
+      if($tableCreated) {
         echo "Table 'admin' created successfully<br>";
       } else {
-        echo "Can't create admin table<br>";
+        echo "Can't create Table 'admin'<br>";
       }
-
-      $sql = "INSERT INTO admin (id, username, password, adminKey) VALUES('2', 'first@admin', 'password', '2134321222')";
-
+      
+      $default = 'test';
+      $hashpwd = password_hash($default, PASSWORD_BCRYPT);
+      $hashKey = password_hash($default, PASSWORD_BCRYPT);
+      $sql = "INSERT INTO admin (username, password, adminKey) VALUES('first@admin', '$hashpwd', '$hashKey')";
       if(mysqli_query($conn, $sql)) {
         $last_id = mysqli_insert_id($conn);
         echo "New admin created successfully. Admin id : " . $last_id;
