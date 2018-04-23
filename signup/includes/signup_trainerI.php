@@ -73,7 +73,7 @@
   $date = date("Y:m:d H:i:s");
   $template = "INSERT INTO members (username, fname, lname, email, phone, joined) VALUES(?, ?, ?, ?, ?, ?);";
 
-  $statement=mysqli_stmt_init($conn);
+  $statement = mysqli_stmt_init($conn);
   mysqli_stmt_prepare($statement, $template);
   mysqli_stmt_bind_param($statement, "ssssss", $username, $fname, $lname, $email, $phone, $date);
   $executed = mysqli_stmt_execute($statement);
@@ -84,14 +84,14 @@
     exit();
   }
 
-  // Add in table client
+  // Add in table trainer
 
   $hashedPwd = password_hash($password, PASSWORD_BCRYPT);
   $experience = (int)$experience;
   $salary = (int)$salary;
   $template = "INSERT INTO trainer (username, password, specialization, qualification, experience, salary, type) VALUES(?, ?, ?, ?, ?, ?, ?);";
 
-  $statement=mysqli_stmt_init($conn);
+  $statement = mysqli_stmt_init($conn);
   mysqli_stmt_prepare($statement, $template);
   mysqli_stmt_bind_param($statement, "ssssiis", $username, $hashedPwd, $specialization, $qualification, $experience, $salary, $type);
   $executed1 = mysqli_stmt_execute($statement);
@@ -100,7 +100,7 @@
     header("Location: ../signup_trainer.php?signup=success");
     exit();
   }
-  else {   
+  else {
    header("Location: ../signup_trainer.php?signup=error");
   }
 ?>
