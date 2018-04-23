@@ -51,7 +51,6 @@
 <link rel="stylesheet" type="text/css" href="./styleNew.css"></link>
 
 
-
 <form action = "./includes/edit_detailsI.php" method = "POST" style = "max-width:500px;margin:auto">
   <h2>Update personal information</h2>
 
@@ -92,18 +91,10 @@
   </div>
 
   <div class = "input-container">
-    <i class = "fa fa-key icon"></i>
-    <?php echo '
-    <input class = "input-field" type = "password" maxlength = "16" placeholder = "Password" name = "password" required value = "'.$password.'" readonly>';
-    ?>
-  </div>
-
-
-  <div class = "input-container">
     <i class = "fa fa-mobile icon"></i>
     <?php
         echo '
-          <input class = "input-field" type = "text" maxlength = "15" placeholder = "Enter mobile number" name = "phone" required value = "'.$phone.'">
+          <input class = "input-field" type = "text" maxlength = "15" placeholder = "Enter mobile number" name = "phone" required value = "'.$phone.'" readonly>
         ';
     ?>
   </div>
@@ -188,7 +179,12 @@
 </div>
 <br>
 
-<button type = "submit" name = "update" class = "btn">Update</button>
+<button type = "submit" name = "update" class = "btn">Update Information</button>
+</form>
+<br>
+
+<form action = "./change_password.php" method = "POST" style = "max-width:500px;margin:auto">
+  <button type = "submit" name = "changePassword" class = "btn">Change password</button>
 </form>
 
 <?php

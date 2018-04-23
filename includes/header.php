@@ -1,4 +1,4 @@
-3<html>
+<html>
     <head>
         <title>Fitness Freak</title>
         <meta charset = "utf-8">
