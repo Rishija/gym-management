@@ -27,6 +27,14 @@
       </div>
 <?php
     }
+    $signupStatus = $_GET['signup'];
+    if($signupStatus == "success") {
+?>
+  <div class="alert alert-success">
+    <strong>Success!</strong> Signed up successfully
+  </div>
+<?php
+  }
 ?>
 
 <link rel = "stylesheet" href = "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">

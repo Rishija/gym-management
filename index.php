@@ -1,5 +1,23 @@
 <?php
     require('includes/header.php');
+    $status = $_GET['login'];
+    if($status == "success") {
+        echo'
+        <div class="alert alert-success">
+          <strong>Success!</strong> Logged in sucessfully
+        </div>
+        ';
+    }
+    else {
+        $status = $_GET['logout'];
+        if($status == "success") {
+            echo'
+            <div class="alert alert-success">
+              <strong>Success!</strong> Logged out sucessfully
+            </div>
+            ';
+        }
+    }
 ?>
 
 <div class = "container" style = "width: 100%; height: 50%;">
