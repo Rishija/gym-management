@@ -34,6 +34,7 @@
   <div class="alert alert-success">
     <strong>Success!</strong> Signed up successfully
   </div>
+<<<<<<< HEAD
 
 <?php
     }
@@ -42,6 +43,8 @@
       <div class="alert alert-danger">
         <strong>Error!</strong> Can't signup
       </div>
+=======
+>>>>>>> 472fc86989c7471898f7d69b9bd5a176bcfecb27
 <?php
   }
 ?>
