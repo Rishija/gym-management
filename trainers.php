@@ -1,7 +1,7 @@
 <?php
     require('includes/header.php');
 ?>
-<link rel = "stylesheet" type = "text/css" href = "style.css">
+<link rel = "stylesheet" type = "text/css" href = "style2.css">
 
 <script type = "text/javascript">
   $(document).ready(function () {
@@ -9,30 +9,12 @@
   });
 </script>
 
-<style>
-table {
-    border-collapse: collapse;
-    width: 100%;
-}
-
-th, td {
-    text-align: center;
-    padding: 8px;
-}
-
-tr:nth-child(even){background-color: #C0C0C0}
-
-th {
-    background-color: #303030;
-    color: white;
-}
-</style>
 
 <div  style = "width: 100%; height: 50%;">
     <img src = "./images/3.jpg" alt = "Los Angeles" style = "width: 100%; height: 100%;">
 </div>
 <h1 align="center">Meet Our Trainers</h1><hr>
-  
+
 <?php
   require('./includes/db.php');
   $details = "SELECT fname, email, specialization from members m  JOIN trainer t where m.username = t.username";
@@ -66,6 +48,6 @@ th {
     ?>
   </table>
 </div>
-    
 
-   
+
+
