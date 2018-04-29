@@ -2,7 +2,7 @@
 
 $serverName = "localhost";
 $userName = "root";
-$password = "root";
+$password = "7041";
 $conn = mysqli_connect($serverName, $userName, $password);
 
 if($conn) {
@@ -44,7 +44,6 @@ if($conn) {
         experience INT(2) NOT NULL,
         salary INT(5),
         type VARCHAR(50),
-        clientAssigned INT(2) DEFAULT 0,
         FOREIGN KEY (username) REFERENCES members(username)
       );";
 
@@ -83,7 +82,8 @@ if($conn) {
         id INTEGER PRIMARY KEY AUTO_INCREMENT,
         username VARCHAR(30) UNIQUE NOT NULL,
         password VARCHAR(256) NOT NULL,
-        adminKey VARCHAR(256) NOT NULL
+        adminKey VARCHAR(256) NOT NULL,
+        joined DATETIME
       )";
 
       $tableCreated = mysqli_query($conn, $table);
@@ -93,10 +93,11 @@ if($conn) {
         echo "Can't create Table 'admin'<br>";
       }
       
+      $date = date("Y:m:d H:i:s");
       $default = 'test';
       $hashpwd = password_hash($default, PASSWORD_BCRYPT);
       $hashKey = password_hash($default, PASSWORD_BCRYPT);
-      $sql = "INSERT INTO admin (username, password, adminKey) VALUES('first@admin', '$hashpwd', '$hashKey')";
+      $sql = "INSERT INTO admin (username, password, adminKey, joined) VALUES('first@admin', '$hashpwd', '$hashKey', '$date')";
       if(mysqli_query($conn, $sql)) {
         $last_id = mysqli_insert_id($conn);
         echo "New admin created successfully. Admin id : " . $last_id;
