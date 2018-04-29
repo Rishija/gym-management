@@ -57,12 +57,12 @@
                         <li><a href = "/gym_management/logout/logout.php"><span class = "glyphicon glyphicon-log-out"></span>Logout</a></li>
                         ';
                       }
-                      else if($_SESSION['type'] == "admin") {
+                      else if($_SESSION['type'] == "trainer") {
                         echo '
                           <li class = "dropdown"><a class = "dropdown-toggle" data-toggle = "dropdown"><span class = "glyphicon glyphicon-user"></span> Account<span class="caret"></span></a>
                           <ul class = "dropdown-menu" style = "text-align: center;">
-                            <li><a href = "/gym_management/admin/edit_details.php">Edit details</a></li>
-                            <li><a href = "/gym_management/admin/create_admin.php">Create admin</a></li>
+                            <li><a href = "/gym_management/trainer/edit_details.php">Edit details</a></li>
+                            <li><a href = "/gym_management/trainer/update_chart.php">Update diet chart</a></li>
                           </ul>
                         </li>
                         ';
@@ -72,7 +72,12 @@
                       }
                       else {
                         echo '
-                        <li><a href = "#"><span class = "glyphicon glyphicon-user">Account</span></a></li>
+                          <li class = "dropdown"><a class = "dropdown-toggle" data-toggle = "dropdown"><span class = "glyphicon glyphicon-user"></span> Account<span class="caret"></span></a>
+                          <ul class = "dropdown-menu" style = "text-align: center;">
+                            <li><a href = "/gym_management/admin/edit_details.php">Edit details</a></li>
+                            <li><a href = "/gym_management/admin/create_admin.php">Create admin</a></li>
+                          </ul>
+                        </li>
                         ';
                         echo '
                         <li><a href = "/gym_management/logout/logout.php"><span class = "glyphicon glyphicon-log-out"></span>Logout</a></li>

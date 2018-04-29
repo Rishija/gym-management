@@ -1,7 +1,7 @@
 <?php
 
   session_start();
-  if($_SESSION['type'] != "client") {
+  if($_SESSION['type'] != "trainer") {
     header("Location: ../index.php");
     exit();
   }
@@ -30,10 +30,9 @@
 <?php
   }
 
-  $getDetails = "SELECT fname, lname, m.username, email, phone, joined,
-  password, weight, height, fee, purpose, history, trainer, chart
-  from client c, members m
-  WHERE m.username=? AND c.username = m.username";
+  $getDetails = "SELECT fname, lname, m.username, email, phone, joined, password, experience
+  from trainer t, members m
+  WHERE m.username=? AND t.username = m.username";
 
   $stmt1 = mysqli_stmt_init($conn);
   mysqli_stmt_prepare($stmt1, $getDetails);
@@ -41,7 +40,7 @@
   mysqli_stmt_execute($stmt1);
 
   mysqli_stmt_bind_result($stmt1, $fname, $lname, $username, $email, $phone, $joined,
-  $password, $weight, $height, $fee, $purpose, $history, $trainer, $chart);
+  $password, $experience);
 
   mysqli_stmt_fetch($stmt1);
   mysqli_stmt_close($stmt1);
@@ -101,49 +100,52 @@
 
   <div class = "input-container">
     <i class = "fa fa-file-text icon"></i>
-    <select class = "input-field" id  =  "purpose" name = "purpose" required>
-      <option value = "" disabled selected>Purpose of joining</option>
-      <option value = "Weight gain">Weight Gain</option>
-      <option value = "Weight loss">Weight loss</option>
-      <option value = "Toning">Toning</option>
-      <option value = "Stay fit">Stay fit</option>
+    <select class = "input-field" id  =  "type" name = "type" required>
+      <option value = "" disabled selected>Trainer type</option>
+      <option value = "Personal Trainer(Hourly)">Personal Trainer(Contingent-Hourly)</option>
+      <option value = "Personal Trainer">Personal Trainer</option>
+      <option value = "Group Trainer">Group Trainer</option>
     </select>
   </div>
 
   <div class = "input-container">
     <i class = "fa fa-inr icon"></i>
-    <select class = "input-field" id = "fee"  name = "fee" required>
-      <option value = "" disabled selected>Choose plan</option>
-      <option value = "2000">Monthly Plan - Rs. 2000</option>
-      <option value = "1800">Quaterly Plan - Rs. 5400 for 3 months</option>
-      <option value = "1700">Special Package - Rs. 9600 for 6 months</option>
-      <option value = "1500">Annual Package - Rs. 18000</option>
+    <select class = "input-field" id = "salary"  name = "salary" required>
+      <option value = "" disabled selected>Choose Expected Salary</option>
+      <option value = "2000">Below Rs. 2000</option>
+      <option value = "3000">Rs. 2000 - Rs. 3000</option>
+      <option value = "4000">Rs. 3000 - Rs. 4000</option>
+      <option value = "5000">Above Rs. 4000</option>
     </select>
   </div>
 
   <div class = "input-container">
-    <i class = "fa fa-balance-scale icon"></i>
-    <?php
-        echo '
-          <input class = "input-field" type = "number" placeholder = "Enter weight" min = "30" max = "999" name = "weight"required value = "'.(int)$weight.'">
-        ';
-    ?>
+    <i class = "fa fa-certificate icon"></i>
+    <select class = "input-field" id = "specialization"  name = "specialization" required>
+      <option value = "" disabled selected>Choose Specialization</option>
+      <option value = "Nutrition and Weight Management">Nutrition and Weight Management</option>
+      <option value = "Clinical Disease">Clinical Disease</option>
+      <option value = "Mind-Body Fitness">Mind-Body Fitness</option>
+      <option value = "Special Populations">Special Populations</option>
+    </select>
   </div>
 
   <div class = "input-container">
-    <i class = "fa fa-child icon"></i>
-    <?php
-        echo '
-          <input class = "input-field" type = "number" placeholder = "Enter Height in meters (upto 3 decimal places)" min = "0" max = "5" step = "0.001" name = "height" required value = "'.(float)$height.'">
-        ';
-    ?>
+    <i class = "fa fa-book icon"></i>
+    <select class = "input-field" id = "qualification"  name = "qualification" required>
+      <option value = "" disabled selected>Choose Qualification</option>
+      <option value = "12th pass">12th Pass</option>
+      <option value = "Diploma">Diploma</option>
+      <option value = "Master's Degree">Master's Degree</option>
+      <option value = "Professioal Degree">Professioal Degree</option>
+    </select>
   </div>
 
   <div class = "input-container">
-    <i class = "fa fa-user-md icon"></i>
+    <i class = "fa fa-black-tie icon"></i>
     <?php
         echo '
-          <input class = "input-field" type = "text" maxlength = "100" placeholder = "Any notable medical history" name = "history" name = "history" required value = "'.$history.'">
+          <input class = "input-field" type = "number" placeholder = "Enter experience" min = "0" max = "30" name = "experience"required value = "'.(int)$experience.'">
         ';
     ?>
   </div>
@@ -155,28 +157,6 @@
     ?>
   </div>
 
-  <div class = "input-container">
-    <i class = "fa fa-male icon"></i>
-    <?php echo '
-    <input class = "input-field" type = "text" placeholder = "No trainer assigned yet" name = "trainer" value = "'.$trainer.'" readonly>';
-    ?>
-  </div>
-
-  <div class = "input-container">
-    <i class = "fa fa-male icon"></i>
-    <?php echo '
-    <input class = "input-field" type = "text" placeholder = "No trainer assigned yet" name = "trainer" value = "'.$trainer.'" readonly>';
-    ?>
-  </div>
-
- <div class = "boxx-container">
-  <h3><br><br><br>Diet chart</h3><hr>
-  <div class = "boxx">
-    <?php
-      echo '<p>'.$chart.'</p>';
-    ?>
-  </div>
-</div>
 <br>
 
 <button type = "submit" name = "update" class = "btn">Update Information</button>
@@ -186,34 +166,3 @@
 <form action = "./change_password.php" method = "POST" style = "max-width:500px;margin:auto">
   <button type = "submit" name = "changePassword" class = "btn">Change password</button>
 </form>
-
-<?php
-
-  /*
-  To be used in trainer
-
-  $insert = "UPDATE client SET chart=? WHERE username=?";
-
-  $stmt2 = mysqli_stmt_init($conn);
-  mysqli_stmt_prepare($stmt2, $insert);
-  $null = NULL;
-  mysqli_stmt_bind_param($stmt2, "bs", $null, $_SESSION['uid']);
-
-  $isSent = mysqli_stmt_send_long_data ($stmt2 , 0 , file_get_contents("./a.txt") );
-  // if($isSent) {
-  //     echo "Done";
-  // }
-  // else {
-  //     echo "Not<br>";
-  // }
-
-  if(mysqli_stmt_execute($stmt2)){
-    echo"inserted";
-  }
-  else{
-    "notinserted";
-  }
-  mysqli_stmt_close($stmt1);
-  */
-
-?>

@@ -94,6 +94,7 @@ if($conn) {
       }
       
       $date = date("Y:m:d H:i:s");
+      
       $default = 'test';
       $hashpwd = password_hash($default, PASSWORD_BCRYPT);
       $hashKey = password_hash($default, PASSWORD_BCRYPT);
