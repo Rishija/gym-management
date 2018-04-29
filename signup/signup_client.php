@@ -139,13 +139,13 @@
 
   <div class = "input-container">
     <i class = "fa fa-file-text icon"></i>
-  <select class = "input-field" id  =  "purpose" name = "purpose" required>
-    <option value = "" disabled selected>Purpose of joining</option>
-    <option value = "Weight gain">Weight Gain</option>
-    <option value = "Weight loss">Weight loss</option>
-    <option value = "Toning">Toning</option>
-    <option value = "Stay fit">Stay fit</option>
-  </select>
+    <select class = "input-field" id  =  "purpose" name = "purpose" required>
+      <option value = "" disabled selected>Purpose of joining</option>
+      <option value = "Weight gain">Weight Gain</option>
+      <option value = "Weight loss">Weight loss</option>
+      <option value = "Toning">Toning</option>
+      <option value = "Stay fit">Stay fit</option>
+    </select>
   </div>
 
   <div class = "input-container">
