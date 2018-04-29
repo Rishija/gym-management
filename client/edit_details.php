@@ -30,10 +30,10 @@
 <?php
   }
 
-  $getDetails = "SELECT fname, lname, username, email, phone, joined,
+  $getDetails = "SELECT fname, lname, m.username, email, phone, joined,
   password, weight, height, fee, purpose, history, trainer, chart
-  from client natural join members
-  WHERE username=?";
+  from client c, members m
+  WHERE m.username=? AND c.username = m.username";
 
   $stmt1 = mysqli_stmt_init($conn);
   mysqli_stmt_prepare($stmt1, $getDetails);
