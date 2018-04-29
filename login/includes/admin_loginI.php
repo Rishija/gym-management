@@ -19,7 +19,7 @@
   mysqli_stmt_prepare($stmt, $getAdmin);
   mysqli_stmt_bind_param($stmt, "s", $name_user);
   mysqli_stmt_execute($stmt);
-  
+
   $result = mysqli_stmt_get_result($stmt);
   $row = mysqli_fetch_array($result);
   $num = count($row);
@@ -40,7 +40,7 @@
     $_SESSION['uid'] = $uid;
     $_SESSION['type'] = $type;
 
-    header("Location: /gym_management/index.php?login=success_admin");
+    header("Location: /gym_management/index.php?login=success&type=admin");
   }
   else {
     header("Location: ../login_admin.php?login=wd&name=$name_user");
