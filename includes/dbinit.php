@@ -92,7 +92,7 @@ if($conn) {
       } else {
         echo "Can't create Table 'admin'<br>";
       }
-      
+
       $default = 'test';
       $hashpwd = password_hash($default, PASSWORD_BCRYPT);
       $hashKey = password_hash($default, PASSWORD_BCRYPT);
