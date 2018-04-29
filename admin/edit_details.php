@@ -67,10 +67,6 @@
     <i class = "fa fa-key icon"></i>
     <input class = "input-field" type = "password" maxlength = "16" placeholder = "Enter new key" name = "key" required >
   </div>
-  <button type = "submit" name = "update" class = "btn">Update Information</button>
-  <br>
-  <br>
+  <button type = "submit" name = "update" class = "btn">Update</button>
 
-<form action = "./change_password.php" method = "POST" style = "max-width:500px;margin:auto">
-  <button type = "submit" name = "assign" class = "btn">Assign trainer to client</button>
 </form>

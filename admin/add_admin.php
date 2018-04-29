@@ -1,25 +1,25 @@
 <?php
     require_once('../includes/header.php');
-    $status = $_GET['signup'];
+    $status = $_GET['add'];
 
-    if($status == "er") {
+    if($status == "taken") {
 ?>
 <div class="alert alert-danger">
-  <strong>Error!</strong> Admin already exist.
+  <strong>Error!</strong> Admin already exists.
 </div>
 <?php
   }
   elseif($status == "error") {
 ?>
 <div class="alert alert-danger">
-  <strong>Error!</strong> Error in creating admin.
+  <strong>Error!</strong> Error in adding new admin.
 </div>
 <?php
   }
   elseif($status == "success") {
 ?>
 <div class="alert alert-success">
-  <strong>Success!</strong> New admin created successfully.
+  <strong>Success!</strong> New admin added successfully.
 </div>
 <?php
   }
@@ -29,7 +29,7 @@
 <link rel = "stylesheet" type = "text/css" href = "style.css">
 
 
-<form action = "./includes/create_adminI.php" method = "POST" style = "max-width:500px;margin:auto">
+<form action = "./includes/add_adminI.php" method = "POST" style = "max-width:500px;margin:auto">
   <h2>New Admin</h2>
 
   <div class = "input-container">
@@ -58,5 +58,5 @@
     <input class = "input-field" type = "Password" maxlength = "16" placeholder = "Key" name = "key" required>
   </div>
 
-  <button type = "submit" name = "submit" class = "btn">Create</button>
+  <button type = "submit" name = "submit" class = "btn">Add</button>
 </form>

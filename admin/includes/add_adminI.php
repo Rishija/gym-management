@@ -26,7 +26,7 @@
 
   // If username exist.
   if($num) {
-    header("Location: ../create_admin.php?signup=er&username=$username");
+    header("Location: ../add_admin.php?add=taken&username=$username");
     exit();
   }
 
@@ -43,10 +43,10 @@
   mysqli_stmt_close($statement);
 
   if(!$executed) {
-    header("Location: ../create_admin.php?signup=error");
+    header("Location: ../add_admin.php?add=error");
     exit();
   }
   else {
-   header("Location: ../create_admin.php?signup=success");
+   header("Location: ../add_admin.php?add=success");
   }
 ?>

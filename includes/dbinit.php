@@ -2,7 +2,7 @@
 
 $serverName = "localhost";
 $userName = "root";
-$password = "7041";
+$password = "root";
 $conn = mysqli_connect($serverName, $userName, $password);
 
 if($conn) {
@@ -92,9 +92,9 @@ if($conn) {
       } else {
         echo "Can't create Table 'admin'<br>";
       }
-      
+
       $date = date("Y:m:d H:i:s");
-      
+
       $default = 'test';
       $hashpwd = password_hash($default, PASSWORD_BCRYPT);
       $hashKey = password_hash($default, PASSWORD_BCRYPT);

@@ -74,8 +74,9 @@
                         echo '
                           <li class = "dropdown"><a class = "dropdown-toggle" data-toggle = "dropdown"><span class = "glyphicon glyphicon-user"></span> Account<span class="caret"></span></a>
                           <ul class = "dropdown-menu" style = "text-align: center;">
-                            <li><a href = "/gym_management/admin/edit_details.php">Edit details</a></li>
-                            <li><a href = "/gym_management/admin/create_admin.php">Create admin</a></li>
+                            <li><a href = "/gym_management/admin/edit_details.php">Update password/key</a></li>
+                            <li><a href = "/gym_management/admin/add_admin.php">Add new admin</a></li>
+                            <li><a href = "/gym_management/admin/create_admin.php">Assign trainer</a></li>
                           </ul>
                         </li>
                         ';
