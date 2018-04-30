@@ -46,8 +46,8 @@
   mysqli_stmt_close($stmt1);
 ?>
 
-<link rel = "stylesheet" href = "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></link>
-<link rel="stylesheet" type="text/css" href="./styleNew.css"></link>
+<link rel = "stylesheet" href = "/gym_management/assets/css/font-awesome.min.css"></link>
+<link rel="stylesheet" type="text/css" href="/gym_management/assets/css/trainer.css"></link>
 
 
 <form action = "./includes/edit_detailsI.php" method = "POST" style = "max-width:500px;margin:auto">

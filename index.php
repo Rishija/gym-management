@@ -32,15 +32,15 @@
         <!-- Wrapper for slides -->
         <div class = "carousel-inner" style = "width: 100%; height: 100%;">
             <div class = "item active" >
-                <img src = "./images/1.jpg" alt = "Los Angeles">
+                <img src = "/gym_management/assets/images/1.jpg" alt = "Los Angeles">
             </div>
 
             <div class = "item">
-                <img src = "./images/2.jpg" alt = "Chicago">
+                <img src = "/gym_management/assets/images/2.jpg" alt = "Chicago">
             </div>
 
             <div class = "item">
-                <img src = "./images/3.jpg" alt = "New york">
+                <img src = "/gym_management/assets/images/3.jpg" alt = "New york">
             </div>
         </div>
 

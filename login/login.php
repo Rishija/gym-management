@@ -27,7 +27,7 @@
 
 <form action = "./includes/loginI.php" method = "POST">
   <div align="center">
-    <img src = "../images/logo.png">
+    <img src = "/gym_management/assets/images/logo.png">
   </div>
 
   <div class = "container">
@@ -50,5 +50,3 @@
     <button type = "submit" name = "submit">Login</button>
   </div>
 </form>
-
-

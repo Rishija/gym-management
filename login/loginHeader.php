@@ -7,4 +7,4 @@ if(isset($_SESSION['uid'])) {
 }
 
 ?>
-<link rel="stylesheet" type="text/css" href="./style.css">
+<link rel="stylesheet" type="text/css" href="/gym_management/assets/css/login.css">
