@@ -26,18 +26,10 @@
       <div class="alert alert-danger">
         <strong>Error!</strong> Username already taken, Please enter different username
       </div>
-<?php
-    }
-    $signupStatus = $_GET['signup'];
-    if($signupStatus == "success") {
-?>
-  <div class="alert alert-success">
-    <strong>Success!</strong> Signed up successfully
-  </div>
 
 <?php
     }
-    elseif($signupStatus == "error") {
+    if($signupStatus == "error") {
 ?>
       <div class="alert alert-danger">
         <strong>Error!</strong> Can't signup

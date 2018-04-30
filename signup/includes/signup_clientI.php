@@ -98,7 +98,7 @@
   $executed1 = mysqli_stmt_execute($statement);
   mysqli_stmt_close($statement);
   if($executed1) {
-    header("Location: ../signup_client.php?signup=success");
+    header("Location: ../../login/login.php?signup=success");
     exit();
   }
   else {

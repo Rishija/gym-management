@@ -24,7 +24,7 @@
   }
   // Validate Last name
   if(!preg_match("/^[a-zA-Z]*$/", $lname)){
-    header("Location: ../signup_trainer.php?signup=mismatch&lname=$lname&email=$email&username=$username&phone=$phone&type=$type&salary=$salary&specialization=$specialization&qualification=$qualification&experience=$experience");
+    header("Location: ../signup_trainer.php?signup=mismatch&fname=$fname&email=$email&username=$username&phone=$phone&type=$type&salary=$salary&specialization=$specialization&qualification=$qualification&experience=$experience");
     exit();
   }
 
@@ -45,7 +45,7 @@
   mysqli_stmt_close($stmt);
 
   if($num) {
-    header("Location: ../signup_trainer.php?signup=er&lname=$lname&email=$email&username=$username&phone=$phone&type=$type&salary=$salary&specialization=$specialization&qualification=$qualification&experience=$experience");
+    header("Location: ../signup_trainer.php?signup=er&fname=$fname&lname=$lname&email=$email&username=$username&phone=$phone&type=$type&salary=$salary&specialization=$specialization&qualification=$qualification&experience=$experience");
     exit();
   }
 
@@ -64,7 +64,7 @@
   mysqli_stmt_close($stmt);
 
   if($num) {
-    header("Location: ../signup_trainer.php?signup=ur&lname=$lname&email=$email&username=$username&phone=$phone&type=$type&salary=$salary&specialization=$specialization&qualification=$qualification&experience=$experience");
+    header("Location: ../signup_trainer.php?signup=ur&fname=$fname&lname=$lname&email=$email&username=$username&phone=$phone&type=$type&salary=$salary&specialization=$specialization&qualification=$qualification&experience=$experience");
     exit();
   }
 
@@ -97,7 +97,7 @@
   $executed1 = mysqli_stmt_execute($statement);
   mysqli_stmt_close($statement);
   if($executed1) {
-    header("Location: ../signup_trainer.php?signup=success");
+    header("Location: ../../login/login.php?signup=success");
     exit();
   }
   else {

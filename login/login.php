@@ -5,6 +5,7 @@
     require('../includes/header.php');
 
     $status = $_GET['login'];
+    $signupStatus = $_GET['signup'];
 
     // Wrong password
     if($status == "wp") {
@@ -23,6 +24,15 @@
       </div>
 <?php
     }
+    // Successful signup
+    if($signupStatus == "success") {
+?>
+    <div class="alert alert-success">
+        <strong>Success!</strong> Signup successful
+    </div>
+
+<?php
+  }
 ?>
 
 <form action = "./includes/loginI.php" method = "POST">
