@@ -14,7 +14,7 @@
 
 <form action = "./includes/admin_loginI.php" method = "POST">
   <div align = "center">
-    <img src = "../images/logo.png">
+    <img src = "/gym_management/assets/images/logo.png">
   </div>
 
   <div class = "container">
@@ -40,4 +40,3 @@
   </div>
 
 </form>
-

@@ -1,14 +1,14 @@
 <?php
     require('includes/header.php');
 ?>
-<link rel = "stylesheet" type = "text/css" href = "style2.css">
+<link rel = "stylesheet" type = "text/css" href = "/gym_management/assets/css/style2.css">
 
 <script type = "text/javascript">
   $(document).ready(function () {
     $('#Contact').addClass('active');
   });
 </script>
-<body style = "background: url(/gym_management/images/3.jpg); background-repeat:no-repeat; background-size: 100% 100%;">
+<body style = "background: url(/gym_management/assets/images/3.jpg); background-repeat:no-repeat; background-size: cover;">
 
 <div class = "box-container">
   <h1><br><br><br>Contact Us</h1><hr>

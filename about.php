@@ -1,7 +1,7 @@
 <?php
     require('includes/header.php');
 ?>
-<link rel = "stylesheet" type = "text/css" href = "style2.css">
+<link rel = "stylesheet" type = "text/css" href = "/gym_management/assets/css/style2.css">
 
 <script type = "text/javascript">
   $(document).ready(function () {

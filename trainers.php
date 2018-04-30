@@ -1,7 +1,7 @@
 <?php
     require('includes/header.php');
 ?>
-<link rel = "stylesheet" type = "text/css" href = "style2.css">
+<link rel = "stylesheet" type = "text/css" href = "/gym_management/assets/css/style2.css">
 
 <script type = "text/javascript">
   $(document).ready(function () {
@@ -11,7 +11,7 @@
 
 
 <div  style = "width: 100%; height: 50%;">
-    <img src = "./images/3.jpg" alt = "Los Angeles" style = "width: 100%; height: 100%;">
+    <img src = "/gym_management/assets/images/3.jpg" alt = "Los Angeles" style = "width: 100%; height: 100%;">
 </div>
 <h1 align="center">Meet Our Trainers</h1><hr>
 
@@ -48,6 +48,3 @@
     ?>
   </table>
 </div>
-
-
-

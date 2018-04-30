@@ -1,7 +1,7 @@
 <?php
     require('includes/header.php');
 ?>
-<link rel = "stylesheet" type = "text/css" href = "style2.css">
+<link rel = "stylesheet" type = "text/css" href = "/gym_management/assets/css/style2.css">
 
 <script type = "text/javascript">
   $(document).ready(function () {
@@ -11,7 +11,7 @@
 
 <div class = "content">
 <h1>Facility 1</h1><hr>
-<p><img src = "/gym_management/images/1.jpg">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+<p><img src = "/gym_management/assets/images/1.jpg">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
 quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
 consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
@@ -24,7 +24,7 @@ Quo tale semper nostrud id, no dico consulatu vis. Vix ad semper docendi compreh
 Vim dolor docendi mentitum et. Adhuc veniam prodesset qui ex, his utinam nonumy graece id, te sed modus tibique. Nominavi voluptatum ei his. Ut quo elitr aliquid phaedrum. Vis prima torquatos vituperata et, ut vim modo pericula persequeris, ut causae viderer mel.<br><br>
 </p>
 <h1>Facility 2</h1><hr>
-<p><img class = "img1" src = "/gym_management/images/2.jpg">
+<p><img class = "img1" src = "/gym_management/assets/images/2.jpg">
 Lorem ipsum dolor sit amet, eam essent molestiae ei, has ea hinc ocurreret signiferumque. At apeirian incorrupte eum, duo vidit summo ornatus eu. An nibh quando interesset vim. Mei eu iusto commodo conclusionemque.
 <br>
 Verear nostrud contentiones ea est. Ut soluta adipisci mandamus usu. Sit audire sapientem constituam ut, porro offendit sea cu, an sed eros perpetua vituperata. Maiestatis instructior theophrastus usu id, postulant partiendo id sea.
@@ -32,7 +32,7 @@ Verear nostrud contentiones ea est. Ut soluta adipisci mandamus usu. Sit audire 
 Vim dolor docendi mentitum et. Adhuc veniam prodesset qui ex, his utinam nonumy graece id, te sed modus tibique. Nominavi voluptatum ei his. Ut quo elitr aliquid phaedrum. Vis prima torquatos vituperata et, ut vim modo pericula persequeris, ut causae viderer mel.
 </p>
 <h1>Facility 3</h1><hr>
-<p><img src = "/gym_management/images/3.jpg">
+<p><img src = "/gym_management/assets/images/3.jpg">
 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
 quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo

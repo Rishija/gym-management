@@ -46,9 +46,8 @@
   }
 ?>
 
-<link rel = "stylesheet" href = "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel = "stylesheet" type = "text/css" href = "style.css">
-
+<link rel = "stylesheet" href = "/gym_management/assets/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="/gym_management/assets/css/signup.css">
 
 <form action = "./includes/signup_trainerI.php" method = "POST" style = "max-width:500px;margin:auto">
   <h2>Join Us As A Trainer</h2>
@@ -199,4 +198,3 @@
 
   <button type = "submit" name = "submit" class = "btn">Join</button>
 </form>
-

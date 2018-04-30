@@ -28,8 +28,8 @@
   }
 ?>
 
-<link rel = "stylesheet" href = "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></link>
-<link rel="stylesheet" type="text/css" href="./styleNew.css"></link>
+<link rel = "stylesheet" href = "/gym_management/assets/css/font-awesome.min.css"></link>
+<link rel="stylesheet" type="text/css" href="/gym_management/assets/css/client.css"></link>
 
 <form action = "./includes/change_passwordI.php" method = "POST" style = "max-width:500px;margin:auto">
   <h2>Change password</h2>
@@ -41,4 +41,3 @@
 
   <button type = "submit" name = "updatePassword" class = "btn">Update</button>
 </form>
-

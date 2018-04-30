@@ -1,7 +1,7 @@
 <?php
     require('includes/header.php');
 ?>
-<link rel="stylesheet" type="text/css" href="style2.css">
+<link rel="stylesheet" type="text/css" href="/gym_management/assets/css/style2.css">
 
 <script type="text/javascript">
   $(document).ready(function () {
@@ -14,18 +14,18 @@
 </div>
 <div class = "img-container">
   <div class = "display">
-    <img src = "/gym_management/images/1.jpg">
-    <img src = "/gym_management/images/2.jpg">
-    <img src = "/gym_management/images/3.jpg">
+    <img src = "/gym_management/assets/images/1.jpg">
+    <img src = "/gym_management/assets/images/2.jpg">
+    <img src = "/gym_management/assets/images/3.jpg">
   </div>
   <div class = "display">
-    <img src = "/gym_management/images/3.jpg">
-    <img src = "/gym_management/images/1.jpg">
-    <img src = "/gym_management/images/2.jpg">
+    <img src = "/gym_management/assets/images/3.jpg">
+    <img src = "/gym_management/assets/images/1.jpg">
+    <img src = "/gym_management/assets/images/2.jpg">
   </div>
   <div class = "display">
-    <img src = "/gym_management/images/2.jpg">
-    <img src = "/gym_management/images/3.jpg">
-    <img src = "/gym_management/images/1.jpg">
+    <img src = "/gym_management/assets/images/2.jpg">
+    <img src = "/gym_management/assets/images/3.jpg">
+    <img src = "/gym_management/assets/images/1.jpg">
   </div>
 </div>
