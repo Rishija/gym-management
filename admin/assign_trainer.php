@@ -26,7 +26,7 @@
 ?>
 
 <link rel = "stylesheet" href = "/gym_management/assets/css/font-awesome.min.css">
-<link rel = "stylesheet" type = "text/css" href = "style.css">
+<link rel = "stylesheet" type = "text/css" href = "/gym_management/assets/css/admin.css">
 
 
 <form action = "./includes/assign_trainerI.php" method = "POST" style = "max-width:500px;margin:auto">

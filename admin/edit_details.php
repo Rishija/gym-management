@@ -44,7 +44,7 @@
 ?>
 
 <link rel = "stylesheet" href = "/gym_management/assets/css/font-awesome.min.css"></link>
-<link rel="stylesheet" type="text/css" href="./style.css"></link>
+<link rel = "stylesheet" type = "text/css" href = "/gym_management/assets/css/admin.css">
 
 
 <form action = "./includes/edit_detailsI.php" method = "POST" style = "max-width:500px;margin:auto">

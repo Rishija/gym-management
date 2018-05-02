@@ -77,6 +77,7 @@
                             <li><a href = "/gym_management/admin/add_admin.php">Add new admin</a></li>
                             <li><a href = "/gym_management/admin/assign_trainer.php">Assign trainer</a></li>
                             <li><a href = "/gym_management/admin/change_trainer_type.php">Change trainer type</a></li>
+                            <li><a href = "/gym_management/admin/remove_member.php">Remove member</a></li>
                           </ul>
                         </li>
                         ';
