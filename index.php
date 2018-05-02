@@ -53,3 +53,28 @@
         </a>
     </div>
 </div>
+
+<link rel = "stylesheet" type = "text/css" href = "/gym_management/assets/css/index.css">
+
+<div class="content">
+<h1>Fitness is Mentality</h1>
+<p>Being healthy and fit in simple terms means taking good care of the body. We should remember that a healthy mind resides only in a healthy body. Good health of both mind and body helps one maintain the required energy level to achieve success in life. All of us must strive to achieve wholesome health.
+
+Protecting your body from the intake of harmful substances, doing regular exercises, having proper food and sleep are some of the important instances that define a healthy lifestyle. Being fit allows us to perform our activities without being lethargic, restless or tired.
+
+A healthy and fit person is capable of living the life to the fullest, without any major medical or physical issues. Being healthy is not only related to the physical well-being of a person, it also involves the mental stability or the internal peace of a person.
+</p>
+</div>
+
+<div class="content">
+<h1>How to stay healthy</h1>
+<p>
+
+Staying healthy physically can help you stay healthy emotionally too. If you're eating the right food and keeping fit, your body will be strong and help you to cope with stress and also fight illness.
+
+Eating well and exercising often when you're a teenager will also help you stay in good health later in life.
+
+Getting regular sleep is another really important way to stay healthy. Having late nights can leave you feeling tired the next day. It can be difficult, but try to have at least 8 hours sleep each night.
+
+</p>
+</div>
