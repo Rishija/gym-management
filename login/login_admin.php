@@ -30,7 +30,7 @@
         }
       ?>
 
-    <label for = "psw"><b>password</b></label>
+    <label for = "psw"><b>Password</b></label>
     <input type = "password" placeholder = "Enter key" name = "password" required>
 
     <label for = "adminKey"><b>AdminKey</b></label>
