@@ -44,6 +44,7 @@ if($conn) {
         experience INT(2) NOT NULL,
         salary INT(5),
         type VARCHAR(50),
+        clients INTEGER DEFAULT 0,
         FOREIGN KEY (username) REFERENCES members(username)
       );";
 

@@ -29,7 +29,7 @@
     exit();
   }
   
-  $clientUsername = "SELECT username from client WHERE username=?";
+  $clientUsername = "SELECT username, trainer from client WHERE username=?";
   $stmt = mysqli_stmt_init($conn);
   mysqli_stmt_prepare($stmt, $clientUsername);
   mysqli_stmt_bind_param($stmt, "s", $client);
@@ -48,7 +48,8 @@
     exit();
   }
 
-
+  //Keep track of current trainer assigned to the client so that we can decrement it's client number by 1.
+  $current_trainer = $row[1];
   $update = "UPDATE client SET trainer = ? WHERE username=?;";
 
   $statement = mysqli_stmt_init($conn);
@@ -62,6 +63,23 @@
     exit();
   }
   else {
-   header("Location: ../assign_trainer.php?assign=success");
+
+    // Previous trainer : Decrement client number by 1.
+    $update = "UPDATE trainer SET clients = clients - 1 WHERE username=?;";
+    $statement = mysqli_stmt_init($conn);
+    mysqli_stmt_prepare($statement, $update);
+    mysqli_stmt_bind_param($statement, "s", $current_trainer);
+    $executed = mysqli_stmt_execute($statement);
+    mysqli_stmt_close($statement);
+
+    //New assigned trainer : Increment clients by 1.
+    $update = "UPDATE trainer SET clients = clients + 1 WHERE username=?;";
+    $statement = mysqli_stmt_init($conn);
+    mysqli_stmt_prepare($statement, $update);
+    mysqli_stmt_bind_param($statement, "s", $trainer);
+    $executed = mysqli_stmt_execute($statement);
+    mysqli_stmt_close($statement);
+
+    header("Location: ../assign_trainer.php?assign=success");
   }
 ?>
