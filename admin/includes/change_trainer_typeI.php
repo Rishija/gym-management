@@ -5,14 +5,14 @@
     exit();
   }
 
-  $client = $_POST['username'];
+  $username = $_POST['username'];
   $type = $_POST['type'];
 
   require('../../includes/db.php');
   $clientUsername = "SELECT username from trainer WHERE username=?";
   $stmt = mysqli_stmt_init($conn);
   mysqli_stmt_prepare($stmt, $clientUsername);
-  mysqli_stmt_bind_param($stmt, "s", $client);
+  mysqli_stmt_bind_param($stmt, "s", $username);
   mysqli_stmt_execute($stmt);
   $result = mysqli_stmt_get_result($stmt);
 
@@ -32,7 +32,7 @@
 
   $statement = mysqli_stmt_init($conn);
   mysqli_stmt_prepare($statement, $update);
-  mysqli_stmt_bind_param($statement, "ss", $type, $client);
+  mysqli_stmt_bind_param($statement, "ss", $type, $username);
   $executed = mysqli_stmt_execute($statement);
   mysqli_stmt_close($statement);
 
