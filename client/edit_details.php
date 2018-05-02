@@ -158,34 +158,3 @@
 <br>
 
 <a href="change_password.php" style="max-width:500px; margin: 0 auto; display:block" class="btn">Change password</a>
-
-<?php
-
-  /*
-  To be used in trainer
-
-  $insert = "UPDATE client SET chart=? WHERE username=?";
-
-  $stmt2 = mysqli_stmt_init($conn);
-  mysqli_stmt_prepare($stmt2, $insert);
-  $null = NULL;
-  mysqli_stmt_bind_param($stmt2, "bs", $null, $_SESSION['uid']);
-
-  $isSent = mysqli_stmt_send_long_data ($stmt2 , 0 , file_get_contents("./a.txt") );
-  // if($isSent) {
-  //     echo "Done";
-  // }
-  // else {
-  //     echo "Not<br>";
-  // }
-
-  if(mysqli_stmt_execute($stmt2)){
-    echo"inserted";
-  }
-  else{
-    "notinserted";
-  }
-  mysqli_stmt_close($stmt1);
-  */
-
-?>
